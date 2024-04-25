@@ -15,8 +15,55 @@
         <div>
             <label for="password">Escribe la contraseña:</label>
             <input type="password" id="password" required>
+            <input type="date">
+            <input type="datetime">
+            <input type="file">
+            <input type="datetime-local">
+            <input type="hidden">
+            <input type="time">
+            <input type="number" max="20" min="1">
+            <input type="range" max="10" min="0">
+            <input type="checkbox">
         </div>
+        <div>
+            <label for="terms">Acepta los terminos y condiciones</label>
+            <input type="checkbox" id="terms">
+        </div>
+        <div>
+            <h2>Que te gusta?</h2>
+            <label for="html">html</label>
+            <input type="checkbox" id="html">
+            <label for="css">css</label>
+            <input type="checkbox" id="css">
+            <label for="javascript">javascript</label>
+            <input type="checkbox" id="javascript">
+        </div>
+        <div>
+            <h2>Que te gusta?</h2>
+            <label for="html">html</label>
+            <input type="radio" name="tecnologia-preferida" id="html">
+            <label for="css">css</label>
+            <input type="radio"name="tecnologia-preferida" id="css">
+            <label for="javascript">javascript</label>
+            <input type="radio"name="tecnologia-preferida" id="javascript">
+        </div>
+
+        <div>
+            <label for="mensaje">Ingrese un mensaje</label>
+            <textarea name="texto" id="mensaje" cols="30" rows="10" placeholder="Aqui" >Mensaje</textarea>
+        </div>
+        <div>
+            <label for="pais">Selecciione un pais</label>
+            <select name="" id="pais">
+                <option value="Argentina">Argentina</option>
+                <option value="Francia">Francia</option>
+                <option value="Brazil">Brazil</option>
+            </select>
+        </div>
+
         <button type="submit">Enviar <img src="/CLASE-4/assets/images/Sonic-PNG.png" alt="asd" height="40px"></button>
+        <button type="submit" value="Confirmar"></button>
+        <button type="reset">Empezar de Vuelta</button>
     </form>
 </body>
 </html>
