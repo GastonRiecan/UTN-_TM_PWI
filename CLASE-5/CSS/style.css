@@ -1,0 +1,16 @@
+h1 {
+    color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.subtitulo {
+    color: blue;
+}
+
+.diferente {
+    color: red;
+}
+
+.subrayado {
+    text-decoration: 1px underline brown;
+}
