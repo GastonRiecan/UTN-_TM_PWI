@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.padre {
+    background-color: green;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 50px;
+}
+
+.padre .hijo {
+    height: 200px;
+    width: 200px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    z-index: 2;
+}
+
+/* .padre .hijo:nth-child(2) {
+    /* Se mueve relativamente a su posicion original */
+    /*position: relative;
+    /*  bottom: 20px; */
+    /*top: 20px;
+    right: 300px;
+    z-index: 1;
+    background-color: brown;
+} */
+
+/* .padre .hijo:nth-child(2) {
+    background-color: red;
+    left: 800px;
+    position: absolute;
+} */
+
+
+.padre .hijo:nth-child(2) {
+    background-color: red;
+    left: 800px;
+    position: fixed;
+}
+
