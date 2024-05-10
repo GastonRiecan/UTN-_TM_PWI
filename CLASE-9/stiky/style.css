@@ -1,0 +1,11 @@
+section {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+
+}
+
+img {
+    position: sticky;
+    top: 40px;
+}

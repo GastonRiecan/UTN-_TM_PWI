@@ -1,0 +1,48 @@
+/* Mobible First */
+
+
+/* Desktop First */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.padre {
+    height: 100vh;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hijo {
+    width: 80vh;
+    height: 200px;
+    background-color: red;
+    border: 1px solid black;
+
+}
+
+
+/* Cuando el ancho de mi pantalla sea mayor a 1000px 
+    -Las mediasquerys siempre van abajo
+    -Los elementos que queremos modificar deben tener la misma especificidad o mayor a los estilos previos del mismo elemento.
+
+
+*/
+
+@media screen and (min-width: 1000px) {
+    .padre{
+        background-color: aqua;
+    }
+
+    .padre .hijo {
+        background-color: blue;
+    }
+}
+
+
