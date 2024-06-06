@@ -113,15 +113,11 @@ const op3 = {
     fecha: '22/11/1997'
 }
 
-
-
 guardarEnHistorial(op1)
 guardarEnHistorial(op2)
 guardarEnHistorial(op3)
 
 let historial = obtenerHistorial()
-
-console.log(historial.lenght);
 
 const renderizaHistorial = () => {
     let listaHistorial = ''
