@@ -5,6 +5,7 @@ import doSomething from './funciones'
 import { Button } from './components/Boton';
 import { Carta } from './components/Carta';
 import Item from './components/Item';
+import RowArticle from './components/RowArticle';
 
 
 
@@ -27,7 +28,9 @@ function App() {
       <Button texto = "pollo"/>
       <Carta/>
       <Item/>
-      </div>
+      </div> 
+      <RowArticle titulo = {'Lift-off: The MDN Curriculum launch'} fecha = {'4 months ago'} direccion_author = {'developer.mozilla.org'}/>
+
 
     </>
   )
