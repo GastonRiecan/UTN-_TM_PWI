@@ -1,0 +1,21 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: 1px solid #ececec;;
+  padding: 0px 14px;
+}
+
+.heart {
+  height: 30px;
+  width: 36px;
+}
