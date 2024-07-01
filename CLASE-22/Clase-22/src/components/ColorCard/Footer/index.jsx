@@ -9,7 +9,7 @@ const Footer = (props) => {
         </div>
         <div>{props.likes}</div>
       </div>
-      <div>{props.fecha}</div>
+      <div className="fecha">{props.fecha}</div>
     </div>
   );
 };
