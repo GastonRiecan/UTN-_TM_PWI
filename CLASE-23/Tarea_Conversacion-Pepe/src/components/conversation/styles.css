@@ -1,0 +1,55 @@
+body {
+    font-family: monospace;
+    background-color: black;
+}
+
+.container {
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/src/assets/imagenes/fondoVerde.jpg);
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightskyblue;
+    border-radius: 10px;
+    margin: 10px 0;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #e1ffc7;
+}
+
+.received {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.sent {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header {
+    font-weight: bold;
+}
+
+.content {
+    margin: 5px 0;
+}
+
+.footer {
+    font-size: 0.8em;
+    color: gray;
+}
+
+.blue {
+    color: blue;
+}
