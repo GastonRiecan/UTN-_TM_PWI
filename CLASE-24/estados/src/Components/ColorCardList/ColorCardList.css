@@ -1,0 +1,8 @@
+.colors-card-container{
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    width: 1190px; /* 250px . 4 + 50px . 3 + 40px */
+    flex-wrap: wrap;
+    
+}

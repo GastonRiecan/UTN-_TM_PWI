@@ -1,6 +1,6 @@
 
 
-const DATA_MOOK = [
+const DATA_MOCK = [
     {
         author: 'pepe',
         content: 'Hola?',
@@ -31,4 +31,4 @@ const DATA_MOOK = [
     },
 ]
 
-export default DATA_MOOK
+export default DATA_MOCK
