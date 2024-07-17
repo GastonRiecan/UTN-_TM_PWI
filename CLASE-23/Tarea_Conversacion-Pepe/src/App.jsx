@@ -1,10 +1,17 @@
 import React from 'react'
-import DATA_MOCK from './data'
-import Conversation from './components/conversation/Conversation'
+import { Route, Routes } from 'react-router-dom'
+import Contacts from './pages/Contacts/Contacts'
+import Chats from './pages/Chats/Chats'
+import ContactInfo from './pages/ContactInfo/ContactInfo'
+
 
 function App() {
   return (
-    <Conversation data={DATA_MOCK}/>
+    <Routes>
+      <Route path='/' element={<Contacts />} />
+      <Route path='/chat/:chat_id' element={<Chats />} />
+      <Route path='/chat/:chat_id/info' element={<ContactInfo />} />
+    </Routes>
   )
 }
 

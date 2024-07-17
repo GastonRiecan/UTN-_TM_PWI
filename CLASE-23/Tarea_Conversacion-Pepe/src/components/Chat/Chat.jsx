@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
 
-const Conversation = ({ data }) => {
+const Chat = ({ data }) => {
   const [message, setMessage] = useState("");
   const [finalData, setFinalData] = useState(data);
   const inputRef = useRef();
@@ -85,4 +85,4 @@ const Conversation = ({ data }) => {
   );
 };
 
-export default Conversation;
+export default Chat;
