@@ -4,13 +4,11 @@ body {
 }
 
 form {
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 0 0 10px 10px;
-  width: 350px;
-  display: flex;
-  justify-content: space-between;
-  background-color: grey;
+    border-radius: 0 0 10px 10px;
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
 }
 
 input {
@@ -18,22 +16,24 @@ input {
   height: 28px;
   border-radius: 8px;
   background-color: lightgray;
+  border: none;
+  outline: none;
 }
 
 button {
   border-radius: 8px;
   background-color: lightgreen;
+  border: none;
+  outline: none;
 }
 
 .container {
-  /* border: 1px solid red; */
-  padding: 20px;
-  border-radius: 10px 10px 0 0;
-  width: 350px;
-  height: 80vh;
-  overflow-y: scroll;
-  background-repeat: no-repeat;
-  background-image: url(/src/assets/imagenes/fondoVerde.jpg);
+    padding: 20px 0 20px 20px;
+    border-radius: 10px 10px 0 0;
+    width: 350px;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-image: url(/src/assets/imagenes/fondoVerde.jpg);
 }
 
 .chat-container {
@@ -79,6 +79,9 @@ button {
 .scrollable {
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
+  overflow-y: scroll;
+  height: 100%;
+  padding-right: 20px;
 }
 
 

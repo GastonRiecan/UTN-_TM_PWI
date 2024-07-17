@@ -16,7 +16,7 @@ const Conversation = ({ data }) => {
     if (finalData.length % 4 === 0 && finalData.length != 4) {
       const pepeMessage = {
         author: "pepe",
-        content: "mensaje del mas alla",
+        content: "mensaje del más allá",
         date: "ahora",
         state: "visto",
         id: crypto.randomUUID(),
@@ -49,25 +49,27 @@ const Conversation = ({ data }) => {
 
   return (
     <>
-      <div className="container scrollable">
-        {finalData.map(({ id, author, content, date, state }) => (
-          <div
-            className={`row ${author === "yo" ? "sent" : "received"}`}
-            key={id} 
-            ref={lastMessageRef}
-          >
-            <div className="chat-container">
-              <div className="header">{author}</div>
-              <div className="content">{content}</div>
-              <div className="footer">
-                {date}&nbsp;
-                <span className={state === "visto" ? "blue" : ""}>
-                  &#10003;&#10003;
-                </span>
+      <div className="container">
+        <div className="scrollable">
+          {finalData.map(({ id, author, content, date, state }) => (
+            <div
+              className={`row ${author === "yo" ? "sent" : "received"}`}
+              key={id} 
+              ref={lastMessageRef}
+            >
+              <div className="chat-container">
+                <div className="header">{author}</div>
+                <div className="content">{content}</div>
+                <div className="footer">
+                  {date}&nbsp;
+                  <span className={state === "visto" ? "blue" : ""}>
+                    &#10003;&#10003;
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
       <form onSubmit={(e) => handleSubmit(e, message)}>
         <input
