@@ -9,8 +9,8 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<Contacts />} />
-      <Route path='/chat/:chat_id' element={<Chats />} />
-      <Route path='/chat/:chat_id/info' element={<ContactInfo />} />
+      <Route path='/chat/:id_contacto' element={<Chats />} />
+      <Route path='/info/:id_contacto' element={<ContactInfo />} />
     </Routes>
   )
 }
