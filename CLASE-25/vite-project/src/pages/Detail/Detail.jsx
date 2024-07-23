@@ -1,13 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
-import { obtenerProductoPorId } from '../../helpers/productos'
-
+import { useParams, useNavigate } from 'react-router-dom'
+import { eliminarProductoPorId, obtenerProductosPorId, obtenerProductos } from '../../helpers/productos'
 
 const Detail = () => {
   /* useParams retorna un objeto con los parametros de busqueda */
   const parametros = useParams()
-  console.log(parametros)
-
+  const navigation = useNavigate();
 
   const {
     nombre,
@@ -18,7 +16,14 @@ const Detail = () => {
     codigo,
     categoria,
     thumbnail
-  } = obtenerProductoPorId(parametros.producto_id)
+  } = obtenerProductosPorId(parametros.producto_id)
+
+  function handleDelete() {
+    if (confirm("Seguro que desea eliminar?")) {
+      eliminarProductoPorId(id)
+      navigation("/");
+    } 
+  }
 
   return (
     <div>
@@ -38,6 +43,7 @@ const Detail = () => {
       </span>
       <br/>
       <button>Comprar</button>
+      <button onClick={handleDelete}>Eliminar</button>
     </div>
   )
 }

@@ -1,13 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./styles.css";
-import {  Link } from "react-router-dom";
+import Header from "../Header/Header";
 
 const Chat = ({ data }) => {
   const [message, setMessage] = useState("");
   const [contactData, setContactData] = useState(data);
   const inputRef = useRef();
   const lastMessageRef = useRef();
-
 
   useEffect(() => {
     inputRef && inputRef.current && inputRef.current.focus();
@@ -57,46 +56,32 @@ const Chat = ({ data }) => {
   function handleMessageChanged(e) {
     setMessage(e.target.value);
   }
-  
+
   return (
     <>
       <div className="container">
-        <div
-          className="header"
-          style={{
-            border: "1px solid grey",
-            borderRadius: "10px",
-            margin: "4px",
-          }}
-        >
-        <Link to="/">
-          {`<---`}
-        </Link>
-        <Link to={`/info/${contactData.id}`}>
-          <img src={`/images/${contactData.profilePicture}`} style={{width: '30px', borderRadius: "50%"}} />
-          {contactData.name}
-        </Link>
-        🔍
-        </div>
+        <Header contactData={contactData} />
         <div className="scrollable">
-          {contactData.chatHistory.map(({ author, content, date, state, id }) => (
-            <div
-              className={`row ${author === "yo" ? "sent" : "received"}`}
-              key={id}
-              ref={lastMessageRef}
-            >
-              <div className="chat-container">
-                <div className="header">{author}</div>
-                <div className="content">{content}</div>
-                <div className="footer">
-                  {date}&nbsp;
-                  <span className={state === "visto" ? "blue" : ""}>
-                    &#10003;&#10003;
-                  </span>
+          {contactData.chatHistory.map(
+            ({ author, content, date, state, id }) => (
+              <div
+                className={`row ${author === "yo" ? "sent" : "received"}`}
+                key={id}
+                ref={lastMessageRef}
+              >
+                <div className="chat-container">
+                  <div className="author">{author}</div>
+                  <div className="content">{content}</div>
+                  <div className="footer">
+                    {date}&nbsp;
+                    <span className={state === "visto" ? "blue" : ""}>
+                      &#10003;&#10003;
+                    </span>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </div>
       <form onSubmit={(e) => handleSubmit(e, message)}>

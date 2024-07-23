@@ -1,0 +1,26 @@
+
+h1 {
+    color: white;
+    margin: 7px;
+    background-color: cadetblue;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+
+.contact-list-container {
+    width: 350px;
+    height: 556px;
+    border-radius: 20px;
+    background-color: black;
+    background-image: url("/images/wspNegro.png");
+    background-size: contain;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+
