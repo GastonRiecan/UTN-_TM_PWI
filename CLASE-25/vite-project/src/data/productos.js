@@ -1,4 +1,5 @@
-const productos = [
+
+export const productos = [
     {
       nombre: "Laptop Gamer Nitro 5",
       descripcion: "Potente laptop para juegos con procesador Intel Core i5, 8GB de RAM y tarjeta gráfica NVIDIA GeForce GTX 1650",

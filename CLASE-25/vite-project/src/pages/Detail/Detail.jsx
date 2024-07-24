@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { eliminarProductoPorId, obtenerProductosPorId, obtenerProductos } from '../../helpers/productos'
+import { useGlobalContext } from '../../Context/ProductContext'
+
 
 const Detail = () => {
   /* useParams retorna un objeto con los parametros de busqueda */
