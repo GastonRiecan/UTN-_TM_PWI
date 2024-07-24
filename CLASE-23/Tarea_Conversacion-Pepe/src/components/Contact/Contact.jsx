@@ -1,6 +1,6 @@
 import "./styles.css";
 import { useNavigate } from "react-router-dom";
-	
+
 const Contact = ({ contact }) => {
   const navigate = useNavigate();
 
@@ -10,12 +10,17 @@ const Contact = ({ contact }) => {
 
   return (
     <section className="contact-container" onClick={handleContactSelect}>
-      <img className="profile-picture"
-        src={`/images/${contact.profilePicture}`}
-      />
+      <div className="imageContainer">
+        <img
+          className="profile-picture"
+          src={`/images/${contact.profilePicture}`}
+        />
+      </div>
       <div className="contact-info">
         <div className="header-info">
-          <span><b>{contact.name}</b></span>
+          <span>
+            <b>{contact.name}</b>
+          </span>
           <span>
             {contact.chatHistory[contact.chatHistory.length - 1].date}
           </span>

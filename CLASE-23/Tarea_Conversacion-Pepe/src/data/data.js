@@ -5,28 +5,28 @@ const data = [
 		profilePicture: "Pepe.jpg",
 		chatHistory: [
 			{
-				author: 'pepe',
+				author: 'Pepe',
 				content: 'Hola?',
 				date: 'ayer a 15:34',
 				state: 'visto',
 				id: 1
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Sos real OMG',
 				date: 'ayer a 15:35',
 				state: 'visto',
 				id: 2
 			},
 			{
-				author: 'pepe',
+				author: 'Pepe',
 				content: 'Obviamente, acaso lo dudaste?',
 				date: 'ayer a 15:36',
 				state: 'visto',
 				id: 3
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Jamas.',
 				date: 'ayer a 15:37',
 				state: 'entregado',
@@ -40,28 +40,28 @@ const data = [
 		profilePicture: "Maria.jpg",
 		chatHistory: [
 			{
-				author: 'maria',
+				author: 'Maria',
 				content: 'Hola, ¿cómo estás?',
 				date: 'hoy a 10:00',
 				state: 'visto',
 				id: 1
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Bien, ¿y tú?',
 				date: 'hoy a 10:01',
 				state: 'visto',
 				id: 2
 			},
 			{
-				author: 'maria',
+				author: 'Maria',
 				content: 'Muy bien, gracias.',
 				date: 'hoy a 10:02',
 				state: 'visto',
 				id: 3
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: '¡Qué bueno!',
 				date: 'hoy a 10:03',
 				state: 'entregado',
@@ -75,28 +75,28 @@ const data = [
 		profilePicture: "Juan.jpg",
 		chatHistory: [
 			{
-				author: 'juan',
+				author: 'Juan',
 				content: '¿Estás en casa?',
 				date: 'hoy a 12:00',
 				state: 'visto',
 				id: 1
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Sí, ¿por qué?',
 				date: 'hoy a 12:01',
 				state: 'visto',
 				id: 2
 			},
 			{
-				author: 'juan',
+				author: 'Juan',
 				content: 'Voy a pasar por ahí.',
 				date: 'hoy a 12:02',
 				state: 'visto',
 				id: 3
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Ok, te espero.',
 				date: 'hoy a 12:03',
 				state: 'entregado',
@@ -117,7 +117,7 @@ const data = [
 				id: 1
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Bastante ocupado, ¿y el tuyo?',
 				date: 'hoy a 14:01',
 				state: 'visto',
@@ -131,7 +131,7 @@ const data = [
 				id: 3
 			},
 			{
-				author: 'yo',
+				author: 'Yo',
 				content: 'Me alegro. ¿Quieres salir más tarde?',
 				date: 'hoy a 14:03',
 				state: 'entregado',

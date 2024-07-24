@@ -1,13 +1,14 @@
-body {
-  font-family: monospace;
-}
 
 form {
   border-radius: 0 0 10px 10px;
   width: 350px;
   display: flex;
   justify-content: space-between;
-  background-color: grey;
+  background-color: cadetblue;
+  padding: 2px;
+  box-sizing: border-box;
+  gap: 3px;
+  height: 34px;
 }
 
 input {
@@ -21,25 +22,27 @@ input {
 
 button {
   border-radius: 8px;
-  background-color: lightgreen;
+  background-color: cadetblue;
   border: none;
   outline: none;
+  width: 51px;
+  color: black;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
   width: 350px;
   height: 556px;
-  background-image: url(/src/assets/imagenes/fondoVerde.jpg);
   background-size: contain;
+  background-color: black;
+  background-image: url("/images/wspNegro.png");
 }
 
 .chat-container {
   display: flex;
   flex-direction: column;
-  border: 1px solid lightskyblue;
   border-radius: 10px;
   margin: 10px 0;
   padding: 10px;
@@ -80,11 +83,14 @@ button {
   scrollbar-width: thin;
   scrollbar-color: #888 #f1f1f1;
   overflow-y: scroll;
-  height: 100%;
   padding-right: 20px;
   padding-left: 20px;
+  flex-grow: 1;
 }
 
 
-
+.bi-send::before {
+  transform: rotate(45deg);
+  font-size: 20px;
+}
 

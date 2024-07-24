@@ -39,7 +39,7 @@ const Chat = ({ data }) => {
     if (!message) return;
 
     const newMessage = {
-      author: "yo",
+      author: "Yo",
       content: message,
       date: "ahora",
       state: "visto",
@@ -58,14 +58,13 @@ const Chat = ({ data }) => {
   }
 
   return (
-    <>
       <div className="container">
         <Header contactData={contactData} />
         <div className="scrollable">
           {contactData.chatHistory.map(
             ({ author, content, date, state, id }) => (
               <div
-                className={`row ${author === "yo" ? "sent" : "received"}`}
+                className={`row ${author === "Yo" ? "sent" : "received"}`}
                 key={id}
                 ref={lastMessageRef}
               >
@@ -83,18 +82,17 @@ const Chat = ({ data }) => {
             )
           )}
         </div>
+        <form onSubmit={(e) => handleSubmit(e, message)}>
+          <input
+            type="text"
+            onChange={handleMessageChanged}
+            value={message}
+            ref={inputRef}
+            placeholder="Escribe un mensaje"
+          />
+          <button type="submit"><i className="bi bi-send"></i></button>
+        </form>
       </div>
-      <form onSubmit={(e) => handleSubmit(e, message)}>
-        <input
-          type="text"
-          onChange={handleMessageChanged}
-          value={message}
-          ref={inputRef}
-          placeholder="Escribe un mensaje"
-        />
-        <button type="submit">Send</button>
-      </form>
-    </>
   );
 };
 
