@@ -1,30 +1,30 @@
 import React, { useState } from "react";
+import { useGlobalContext } from "../../Context/ProductContext";
+import { users } from "../../data/usersData.js";
+import { useNavigate } from "react-router-dom";
+
+const initialState = { username: "", password: "" };
+const initialStateErrors = {
+  username: [],
+  password: [],
+};
 
 const Login = () => {
-  const initialState = { username: "", password: "" };
-  const initialStateErrors = {
-    username: [],
-    password: [],
-  };
   const [loginForm, setLoginForm] = useState(initialState);
   const [errors, setErrors] = useState(initialStateErrors);
+  const { setUserData } = useGlobalContext();
+  const navigation = useNavigate();
+
   const handleChangeValue = (e) => {
     setLoginForm({ ...loginForm, [e.target.name]: e.target.value });
   };
+
   const validateLength = (value, length) => {
     return value < length;
   };
 
   const validateUsernameLength = (value) => {
-    return validateLength(value.length, 10);
-  };
-
-  const ERRORS = {
-    USERNAME_LENGTH: {
-      text: "tu nombre de usuario debe tener mas de 10 caracteres",
-      id: 1,
-      validate: validateUsernameLength,
-    },
+    return validateLength(value.length, 3);
   };
 
   const findError = (from, id_error) => {
@@ -47,14 +47,42 @@ const Login = () => {
   };
 
   const handleAbortInput = () => {
-    console.log(loginForm);
-    console.log(errors);
     validateError("username", ERRORS.USERNAME_LENGTH);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (errors.username.length > 0 || errors.password.length > 0) return;
+
+    const userData = users.find(
+      (user) =>
+        user.username === loginForm.username &&
+        user.password === loginForm.password
+    );
+
+    if (!userData) {
+      alert(
+        "Los datos ingresados son incorrectos. Vuelva a ingresar sus credenciales."
+      );
+    } else {
+      setUserData(userData);
+      navigation("/");
+    }
+  };
+
+  const ERRORS = {
+    USERNAME_LENGTH: {
+      text: "tu nombre de usuario debe tener mas de 10 caracteres",
+      id: 1,
+      validate: validateUsernameLength,
+    },
+  };
+
   return (
     <main>
       <h1>Iniciar sesion</h1>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username">Nombre de usuario:</label>
           <input

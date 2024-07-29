@@ -75,3 +75,30 @@ thumbnail: string(HECHO)
 
 TODAVIA no es necesario validaciones o capturas de dato, PERO si es necesario el Form en HTML
 */
+
+/* 
+mook = [
+    {
+        contact_id: 1,
+        messages: [
+            {
+                text: 'lorem',
+                time: 'hoy'
+                author: 'pepe',
+                id:1
+            }
+        ]
+    },
+    {
+        contact_id: 2,
+        messages: [
+            {
+                text: 'lorem',
+                time: 'hoy'
+                author: 'pepe',
+                id:1
+            }
+        ]
+    }
+]
+*/
